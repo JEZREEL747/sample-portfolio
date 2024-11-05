@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jezreel Rodriguez - Professional Portfolio</title>
+    <style>
+        :root {
+            --navy-primary: #1a2b47;
+            --navy-secondary: #2c4167;
+            --navy-accent: #3d5a80;
+            --light-blue: #e0e7ff;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --background-light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--navy-primary);
+            color: var(--text-light);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            transition: 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-blue);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(26, 43, 71, 0.9), rgba(26, 43, 71, 0.85)),
+                        url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: var(--light-blue);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #e0e7ff;
+        }
+
+        .section {
+            padding: 5rem 1rem;
+        }
+
+        .section-light {
+            background-color: var(--background-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--navy-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--navy-primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background-color: var(--navy-accent);
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--navy-accent);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .experience-item h3 {
+            color: var(--navy-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .role {
+            color: var(--navy-secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--navy-primary);
+            color: var(--text-light);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--navy-secondary);
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <h2>J.E. Rodriguez</h2>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>JEZREEL E. RODRIGUEZ, MIT</h1>
+            <h2>Information Technology Professional</h2>
+            <p>Specializing in IT Education and Systems Administration</p>
+        </div>
+    </section>
+
+    <section class="section section-light" id="profile">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Profile</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Teaching</h3>
+                    <p>IT Instructor with experience in curriculum development and classroom instruction.</p>
+                </div>
+                <div class="card">
+                    <h3>Administration</h3>
+                    <p>ICT and Network Administrator managing technological infrastructure.</p>
+                </div>
+                <div class="card">
+                    <h3>Development</h3>
+                    <p>Software development and system implementation experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="experience-item">
+                <h3>Information Technology Instructor</h3>
+                <div class="role">Teaching Experience: 9 Years</div>
+                <p>Conducting IT courses and laboratory sessions</p>
+            </div>
+            <div class="experience-item">
+                <h3>Systems Administration</h3>
+                <div class="role">ICT Administrator</div>
+                <p>Managing network infrastructure and system maintenance</p>
+            </div>
+            <div class="experience-item">
+                <h3>Business Operations</h3>
+                <div class="role">Business Owner</div>
+                <p>Managing technology-related business operations</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>Available for professional inquiries</p>
+            </div>
+            <p>&copy; 2024 J.E. Rodriguez</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(26, 43, 71, 0.95)';
+                header.style.padding = '0.5rem 1rem';
+            } else {
+                header.style.background = 'var(--navy-primary)';
+                header.style.padding = '1rem';
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Subtle animation for cards and experience items
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .experience-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
